@@ -6,7 +6,7 @@
              x:Name="landingPage">
   <ScrollView>
     <StackLayout Padding="10">
-            <!--<Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />-->
+            <Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />
 
             <StackLayout Orientation="Horizontal">
                 <Picker ItemsSource="{Binding PairedDevices}" SelectedItem="{Binding SelectedDevice, Mode=TwoWay}" Title="Select Device" HorizontalOptions="StartAndExpand" />
@@ -14,21 +14,24 @@
             </StackLayout>
 
             <BoxView />
-
-            <!--<Entry x:Name="postText" Placeholder="Enter Message Here" />
-            <Button x:Name="submitPost" Text="Post" Clicked="OnPost" HorizontalOptions="EndAndExpand" />
-
-            <BoxView HeightRequest="50"/>
-
-            <Label x:Name="viewDisplay" Text="This is where the post will be displayed" FontSize="Large" />
-            <Button x:Name="requestPost" Text="Request Post" Clicked="OnRequest" />
-
-            <BoxView HeightRequest="50"/>
-
-            <Label x:Name="viewDebug" Text="Debug" />-->
-
         
-        <Label Text="{Binding Message}" VerticalOptions="EndAndExpand" />
-    </StackLayout>
+            <Entry Placeholder="Enter Message Here" Text="{Binding PostInput, Mode=TwoWay}" />
+            <Button Text="Post" Command="{Binding Post}" HorizontalOptions="EndAndExpand" />
+
+            <BoxView HeightRequest="50"/>
+
+            <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="EndAndExpand" />
+            <Button Text="Request Post" Command="{Binding Request}" HorizontalOptions="EndAndExpand" />
+
+            <!--<ListView ItemsSource="{Binding Operations}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Button Grid.Column="1" Text="{Binding}" Command="{Binding BindingContext.Execute, Source={x:Reference Name=landingPage}}" CommandParameter="{Binding}" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+        </StackLayout>
   </ScrollView>
 </ContentPage>
