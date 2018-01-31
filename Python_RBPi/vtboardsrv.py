@@ -85,8 +85,11 @@ def main():
                        profiles=[SERIAL_PORT_PROFILE])
 
     # Operations the service supports
-    operations = ["ping", "test", "test2"]
-
+    operations = ["ping", "test"]
+    
+    # Sets default if no posts are saved
+    postdata = "No Posts Saved"
+    
     # Main Bluetooth server loop
     while True:
 		
@@ -105,19 +108,23 @@ def main():
             data = client_sock.recv(1024)
             if len(data) == 0:
                 break
-
+            
+            #data spliting into seperate variables, off from client socket
+            post = data.split(":")
+            #postdata = data[1]
             #Prints data received if length is more than zero
 	    print "Received [%s]" % data
 
-            # Handle the requests
-            if data == "getop":
+            #Old testind
+            if post[0] == "getop":
                 response = "op:%s" % ",".join(operations)
-            elif data == "ping":
-                response = "msg:Pong"
-            elif data == "test":
-                response = "msg:This is just a test."
-            elif data == "test2":
-                response = "msg:It works!"
+            #Handles posts to the board
+            elif post[0] == "pst":
+                postdata = post[1]
+                response = "msg:Success"
+            #Handles request for saved post 
+            elif post[0] == "rqst":
+                response = "msg:" + postdata
             else:
                 response = "msg:Not supported"
 
@@ -128,6 +135,7 @@ def main():
         except IOError:
             pass
 
+        #Lagacy for when not a service
         except KeyboardInterrupt:
 
             if client_sock is not None:

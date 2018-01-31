@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{B970766A-E261-40E1-A02B-34FE3DE0E6BE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VTBoard/VTBoard/UI/LandingPageViewModel.cs">
+    <Files>
+      <File FileName="VTBoard/VTBoard/Services/IBtDiscovery.cs" Line="14" Column="12" />
+      <File FileName="VTBoard/VTBoard/Services/IBtClient.cs" Line="1" Column="1" />
+      <File FileName="VTBoard/VTBoard/UI/LandingPageViewModel.cs" Line="63" Column="26" />
+      <File FileName="VTBoard/VTBoard/UI/LandingPage.xaml" Line="13" Column="63" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.VTBoard.Android PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+</Properties>
