@@ -8,6 +8,7 @@ System.Reactive.Interfaces
 System.Reactive.Linq
 System.Reactive.PlatformServices
 System.Runtime
+VTBoard
 Xamarin.Android.Support.Animated.Vector.Drawable
 Xamarin.Android.Support.Design
 Xamarin.Android.Support.v4
@@ -20,4 +21,3 @@ Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
-VTBoard

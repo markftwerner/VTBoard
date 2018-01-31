@@ -19,7 +19,7 @@ namespace VTBoard.Android.Services
     public class ProgressDialogService : IProgressDialogService
     {
         private Activity _activity;
-        private Android.App.ProgressDialog _currentDialog;
+        private ProgressDialog _currentDialog;
 
         public ProgressDialogService(Activity activity)
         {
