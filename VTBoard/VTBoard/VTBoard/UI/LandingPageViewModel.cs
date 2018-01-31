@@ -42,6 +42,14 @@ namespace VTBoard.UI
             set { this.RaiseAndSetIfChanged(ref _selectedDevice, value); }
         }
 
+        private string _postInput;
+
+        public string PostInput
+        {
+            get { return _postInput; }
+            set { this.RaiseAndSetIfChanged(ref _postInput, value); }
+        }
+
         private string _message;
         /// <summary>
         /// Last message from server
@@ -61,6 +69,18 @@ namespace VTBoard.UI
         /// Refreshes the list of paired devices
         /// </summary>
         public ReactiveCommand<Unit, Unit> Refresh { get; set; }
+
+        /// <summary>
+        /// Posts typed massage
+        /// </summary>
+        public ReactiveCommand<Unit, Unit> Post { get; set; }
+        
+        /// <summary>
+        /// Requests post
+        /// </summary>
+        public ReactiveCommand<Unit, Unit> Request { get; set; }
+
+
 
         /// <summary>
         /// Executes an operation from the available list
@@ -104,6 +124,16 @@ namespace VTBoard.UI
             {
                 _btDiscovery.Refresh();
             });
+            // The post command
+            Post = ReactiveCommand.Create(() =>
+            {
+                _btClient.SendData("pst:" + PostInput);
+            });
+            // The request command
+            Request = ReactiveCommand.Create(() =>
+            {
+                _btClient.SendData("rqst:uniq");
+            });
 
             // Handle the selection of a device from the list
             this.WhenAnyValue(vm => vm.SelectedDevice)
@@ -123,7 +153,7 @@ namespace VTBoard.UI
                     if (_btClient.Connect(device.Address))
                     {
                         // Fetch supported operations from the server
-                        _btClient.SendData("getop");
+                        _btClient.SendData("getop:");
                     }
                     else
                     {
