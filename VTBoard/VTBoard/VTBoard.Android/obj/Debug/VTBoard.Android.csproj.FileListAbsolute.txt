@@ -1,0 +1,2 @@
+C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard.Android\obj\Debug\VTBoard.Android.csprojResolveAssemblyReference.cache
+C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard.Android\obj\Debug\VTBoard.Android.csproj.CoreCompileInputs.cache
