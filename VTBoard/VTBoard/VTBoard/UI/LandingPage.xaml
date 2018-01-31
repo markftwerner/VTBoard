@@ -6,20 +6,27 @@
              x:Name="landingPage">
   <ScrollView>
     <StackLayout Padding="10">
+            <!--<Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />-->
+
             <StackLayout Orientation="Horizontal">
                 <Picker ItemsSource="{Binding PairedDevices}" SelectedItem="{Binding SelectedDevice, Mode=TwoWay}" Title="Select Device" HorizontalOptions="StartAndExpand" />
-                <Button Image="refresh" Command="{Binding Refresh}" HorizontalOptions="End"/>
+                <Button Text="Refresh" Command="{Binding Refresh}" HorizontalOptions="End"/>
             </StackLayout>
 
-            <ListView ItemsSource="{Binding Operations}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>                        
-                        <Button Grid.Column="1" Text="{Binding}" Command="{Binding BindingContext.Execute, Source={x:Reference Name=landingPage}}" CommandParameter="{Binding}" />
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            <BoxView />
+
+            <!--<Entry x:Name="postText" Placeholder="Enter Message Here" />
+            <Button x:Name="submitPost" Text="Post" Clicked="OnPost" HorizontalOptions="EndAndExpand" />
+
+            <BoxView HeightRequest="50"/>
+
+            <Label x:Name="viewDisplay" Text="This is where the post will be displayed" FontSize="Large" />
+            <Button x:Name="requestPost" Text="Request Post" Clicked="OnRequest" />
+
+            <BoxView HeightRequest="50"/>
+
+            <Label x:Name="viewDebug" Text="Debug" />-->
+
         
         <Label Text="{Binding Message}" VerticalOptions="EndAndExpand" />
     </StackLayout>
