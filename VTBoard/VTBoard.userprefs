@@ -1,10 +1,8 @@
 ﻿<Properties StartupConfiguration="{B970766A-E261-40E1-A02B-34FE3DE0E6BE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="VTBoard/VTBoard/UI/LandingPageViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VTBoard/VTBoard/UI/Network_Domain.xaml">
     <Files>
-      <File FileName="VTBoard/VTBoard/Services/IBtDiscovery.cs" Line="14" Column="12" />
-      <File FileName="VTBoard/VTBoard/Services/IBtClient.cs" Line="1" Column="1" />
-      <File FileName="VTBoard/VTBoard/UI/LandingPageViewModel.cs" Line="63" Column="26" />
-      <File FileName="VTBoard/VTBoard/UI/LandingPage.xaml" Line="13" Column="63" />
+      <File FileName="VTBoard/VTBoard/UI/Network_Domain.xaml" Line="6" Column="1" />
+      <File FileName="VTBoard/VTBoard/UI/Network_DomainViewModel.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
