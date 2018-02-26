@@ -8,10 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 namespace VTBoard {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/jdidde11/Desktop/VTBoard/VTBoard/VTBoard/VTBoard/UI/Setting.xaml")]
+=======
+namespace VTBoard.UI {
+    
+    
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Mark\\source\\repos\\VTBoard\\VTBoard\\VTBoard\\VTBoard\\UI\\Setting.xaml")]
+>>>>>>> 82dcf07eb536fcfc26a39b85790abac24179dc37
     public partial class Setting : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
