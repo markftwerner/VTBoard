@@ -5,5 +5,8 @@
              Title="NetworkDomain"
              x:Name="networkDomain">
 	<ContentPage.Content>
+        
+        
+        
 	</ContentPage.Content>
 </ContentPage>

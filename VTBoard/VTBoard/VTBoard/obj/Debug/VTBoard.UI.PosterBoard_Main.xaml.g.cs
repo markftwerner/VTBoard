@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VTBoard {
+namespace VTBoard.UI {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Mark\\source\\repos\\VTBoard\\VTBoard\\VTBoard\\VTBoard\\UI\\PosterBoard_Main.xa" +
