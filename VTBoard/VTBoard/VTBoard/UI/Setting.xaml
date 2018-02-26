@@ -4,6 +4,19 @@
              x:Class="VTBoard.UI.Setting"
              Title="Setting"
              x:Name="setting">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    <StackLayout Padding="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Menu" Grid.Column="0" />
+            <Label Text="VTBoard" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <BoxView Grid.Column="2" Color="Red"/>
+        </Grid>
+    </StackLayout>
 </ContentPage>
