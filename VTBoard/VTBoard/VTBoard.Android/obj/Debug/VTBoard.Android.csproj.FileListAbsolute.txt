@@ -72,6 +72,7 @@ C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard.Android\obj\Debug\and
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard.Android\bin\Debug\RasPiBtControl.Android.dll
+C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\bin\Debug\VTBoard.dll
 bin\Debug\VTBoard.dll.mdb
 bin\Debug\Mono.Android.pdb
 bin\Debug\mscorlib.pdb

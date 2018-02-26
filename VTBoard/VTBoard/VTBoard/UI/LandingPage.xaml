@@ -4,9 +4,23 @@
              x:Class="VTBoard.UI.LandingPage"
              Title="LandingPage"
              x:Name="landingPage">
-  <ScrollView>
-    <StackLayout Padding="10">
-            <Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />
+
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Menu" Grid.Column="0" />
+                <Label Text="VTBoard" Grid.Column="1" />
+                <BoxView Grid.Column="2" />
+            </Grid>
+            <!--<Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />-->
 
             <StackLayout Orientation="Horizontal">
                 <Picker ItemsSource="{Binding PairedDevices}" SelectedItem="{Binding SelectedDevice, Mode=TwoWay}" Title="Select Device" HorizontalOptions="StartAndExpand" />
@@ -14,7 +28,7 @@
             </StackLayout>
 
             <BoxView />
-        
+
             <Entry Placeholder="Enter Message Here" Text="{Binding PostInput, Mode=TwoWay}" />
             <Button Text="Post" Command="{Binding Post}" HorizontalOptions="EndAndExpand" />
 
@@ -33,5 +47,5 @@
                 </ListView.ItemTemplate>
             </ListView>-->
         </StackLayout>
-  </ScrollView>
+    </ScrollView>
 </ContentPage>
