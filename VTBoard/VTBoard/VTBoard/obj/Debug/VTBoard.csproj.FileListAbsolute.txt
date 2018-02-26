@@ -28,4 +28,5 @@ C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.App
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.UI.LandingPage.xaml.g.cs
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.dll
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.pdb
-C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.csprojResolveAssemblyReference.cache
+C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.UI.PosterBoard_Main.xaml.g.cs
+C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.UI.Network_Domain.xaml.g.cs
