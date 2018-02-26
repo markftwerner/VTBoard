@@ -71,6 +71,11 @@ namespace VTBoard.UI
         public ReactiveCommand<Unit, Unit> Refresh { get; set; }
 
         /// <summary>
+        /// Opens the menu
+        /// </summary>
+        public ReactiveCommand<Unit, Unit> Menu { get; set; }
+
+        /// <summary>
         /// Posts typed massage
         /// </summary>
         public ReactiveCommand<Unit, Unit> Post { get; set; }
@@ -123,6 +128,11 @@ namespace VTBoard.UI
             Refresh = ReactiveCommand.Create(() =>
             {
                 _btDiscovery.Refresh();
+            });
+            // The Menu command
+            Menu = ReactiveCommand.Create(() =>
+            {
+                
             });
             // The post command
             Post = ReactiveCommand.Create(() =>

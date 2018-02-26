@@ -13,7 +13,8 @@ namespace VTBoard
         {
             InitializeComponent();
 
-            MainPage = new VTBoard.UI.LandingPage();
+            //MainPage = new VTBoard.UI.LandingPage();
+            MainPage = new NavigationPage(new UI.LandingPage);
         }
 
         protected override void OnStart()
