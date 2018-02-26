@@ -11,7 +11,7 @@
 namespace VTBoard {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Mark\\source\\repos\\VTBoard\\VTBoard\\VTBoard\\VTBoard\\App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/jdidde11/Desktop/VTBoard/VTBoard/VTBoard/VTBoard/App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

@@ -2,7 +2,6 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="VTBoard/VTBoard/UI/Network_Domain.xaml">
     <Files>
       <File FileName="VTBoard/VTBoard/UI/Network_Domain.xaml" Line="6" Column="1" />
-      <File FileName="VTBoard/VTBoard/UI/Network_DomainViewModel.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
