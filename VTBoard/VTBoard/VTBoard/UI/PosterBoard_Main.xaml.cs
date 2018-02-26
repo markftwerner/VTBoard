@@ -14,10 +14,8 @@ namespace VTBoard.UI
     {
         public PosterBoard_Main()
         {
-
             InitializeComponent();
             BindingContext = new PosterBoard_MainViewModel();
-        
         }
     }
 }
