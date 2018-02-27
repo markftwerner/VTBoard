@@ -132,7 +132,7 @@ namespace VTBoard.UI
             // The Menu command
             Menu = ReactiveCommand.Create(() =>
             {
-                
+
             });
             // The post command
             Post = ReactiveCommand.Create(() =>
