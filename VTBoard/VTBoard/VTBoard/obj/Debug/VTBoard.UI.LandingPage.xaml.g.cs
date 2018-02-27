@@ -11,7 +11,7 @@
 namespace VTBoard.UI {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/jdidde11/Desktop/VTBoard/VTBoard/VTBoard/VTBoard/UI/LandingPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Mark\\source\\repos\\VTBoard\\VTBoard\\VTBoard\\VTBoard\\UI\\LandingPage.xaml")]
     public partial class LandingPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

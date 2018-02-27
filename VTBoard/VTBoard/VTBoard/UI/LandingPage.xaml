@@ -16,7 +16,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Text="Menu" Grid.Column="0" />
+                <Button Text="Menu" Command="{Binding Menu}" Grid.Column="0" />
                 <Label Text="VTBoard" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
                 <BoxView Grid.Column="2" Color="Red"/>
             </Grid>

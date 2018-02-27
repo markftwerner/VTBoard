@@ -1,5 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VTBoard.Menu">
-	<ContentPage.Content>
-	</ContentPage.Content>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VTBoard.UI.Menu"
+             Title="Menu"
+             x:Name="menu">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Button Text="Poaster Board" Command="{Binding Board}" HorizontalOptions="StartAndExpand" />
+            <Button Text="Create Post" Command="{Binding CreatePost}" HorizontalOptions="StartAndExpand" />
+            <Button Text="History" Command="{Binding History}" HorizontalOptions="StartAndExpand" />
+            <Button Text="Networks" Command="{Binding Networks}" HorizontalOptions="StartAndExpand" />
+            <Button Text="Settings" Command="{Binding Settings}" HorizontalOptions="StartAndExpand" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
