@@ -23,6 +23,7 @@ C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\bin\Debug\Xamarin.For
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.csprojResolveAssemblyReference.cache
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.csproj.CoreCompileInputs.cache
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.App.xaml.g.cs
 C:\Users\Mark\source\repos\VTBoard\VTBoard\VTBoard\VTBoard\obj\Debug\VTBoard.UI.PosterBoard_Main.xaml.g.cs
