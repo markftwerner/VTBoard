@@ -1,16 +1,10 @@
 ﻿<Properties StartupConfiguration="{B970766A-E261-40E1-A02B-34FE3DE0E6BE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="VTBoard/VTBoard/UI/MenuViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VTBoard/VTBoard/App.xaml.cs">
     <Files>
-      <File FileName="VTBoard/VTBoard/UI/LandingPageViewModel.cs" Line="1" Column="1" />
-      <File FileName="VTBoard/VTBoard/UI/Network_Domain.xaml" Line="11" Column="18" />
-      <File FileName="VTBoard/VTBoard/UI/Setting.xaml" Line="6" Column="1" />
-      <File FileName="VTBoard/VTBoard/UI/Setting.xaml.cs" Line="1" Column="1" />
-      <File FileName="VTBoard/VTBoard/UI/Setting_ViewModel.cs" Line="1" Column="1" />
-      <File FileName="VTBoard/VTBoard.Android/MainActivity.cs" Line="78" Column="14" />
-      <File FileName="VTBoard/VTBoard/App.xaml.cs" Line="27" Column="10" />
-      <File FileName="VTBoard/VTBoard/UI/Menu.xaml" Line="6" Column="1" />
-      <File FileName="VTBoard/VTBoard/UI/Menu.xaml.cs" Line="16" Column="1" />
-      <File FileName="VTBoard/VTBoard/UI/MenuViewModel.cs" Line="1" Column="1" />
+      <File FileName="VTBoard/VTBoard/UI/LandingPage.xaml" Line="51" Column="15" />
+      <File FileName="VTBoard/VTBoard/UI/LandingPageViewModel.cs" Line="179" Column="37" />
+      <File FileName="VTBoard/VTBoard/UI/LandingPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="VTBoard/VTBoard/App.xaml.cs" Line="16" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
