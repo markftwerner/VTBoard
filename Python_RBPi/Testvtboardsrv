@@ -4,7 +4,7 @@ import logging
 import logging.handlers
 import argparse
 import sys
-import os, base64
+import os
 import time
 from bluetooth import *
 
@@ -124,13 +124,7 @@ def main():
                 response = "msg:Success"
             #Handles request for saved post 
             elif post[0] == "rqst":
-                for filename in os.listdir('.'):
-                    if filename.endswith('.txt'):
-                        with open(os.path.join('.', filename)) as f:
-                            content = f.read()
-                        #str = base64.b64encode(imageFile.read())
-                        #print (content)
-                response = "msg:" + content
+                response = "msg:" + postdata
             else:
                 response = "msg:Not supported"
 
