@@ -240,7 +240,12 @@ namespace VTBoard.UI
                     Operations.Add(op);
                 }
             }
-            // Insert more handlers here
+            else if (data.StartsWith("pst"))
+            {
+                var parts = data.Split(':');
+                var postTotal = parts[1].Split('#$#');
+
+            }
             else
             {
                 Message = $"Unknown response {data}";
