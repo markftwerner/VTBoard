@@ -4,7 +4,16 @@
              x:Class="VTBoard.UI.LandingPage"
              Title="LandingPage"
              x:Name="landingPage">
-
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="plainButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ScrollView>
         <StackLayout Padding="10">
             <Grid>
@@ -27,6 +36,23 @@
                 <Button Text="Refresh" Command="{Binding Refresh}" HorizontalOptions="End"/>
             </StackLayout>
 
+            <!--<Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="This is a title 1" Grid.Column="0"/>
+                <Button Text="VTBoard" Grid.Column="1"/>
+                <Button Text="This is a title 2" Grid.Column="0"/>
+            </Grid>
+
             <BoxView />
 
             <Entry Placeholder="Enter Message Here" Text="{Binding PostInput, Mode=TwoWay}" />
@@ -35,17 +61,20 @@
             <BoxView HeightRequest="50"/>
 
             <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="EndAndExpand" />
-            <Button Text="Request Post" Command="{Binding Request}" HorizontalOptions="EndAndExpand" />
+            <Button Text="Request Post" Command="{Binding Request}" HorizontalOptions="EndAndExpand" />-->
 
-            <!--<ListView ItemsSource="{Binding Operations}">
+            <ListView ItemsSource="{Binding Operations}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Button Grid.Column="1" Text="{Binding}" Command="{Binding BindingContext.Execute, Source={x:Reference Name=landingPage}}" CommandParameter="{Binding}" />
+                            <Button Text="{Binding}" Command="{Binding BindingContext.Execute, Source={x:Reference Name=landingPage}}" CommandParameter="{Binding}" Style="{StaticResource plainButton}" />
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>-->
+            </ListView>
+
+            <Label Text="{Binding Output}" FontSize="Large" VerticalOptions="StartAndExpand"/>
+            <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="FillAndExpand" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

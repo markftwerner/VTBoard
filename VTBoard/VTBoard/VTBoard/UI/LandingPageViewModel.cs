@@ -60,6 +60,15 @@ namespace VTBoard.UI
             set { this.RaiseAndSetIfChanged(ref _message, value); }
         }
 
+        private string _output;
+        public string Output
+        {
+            get { return _output; }
+            set { this.RaiseAndSetIfChanged(ref _output, value); }
+        }
+
+        private Dictionary<string, string> posts;
+
         /// <summary>
         /// List of supported operations by the server
         /// </summary>
@@ -85,12 +94,11 @@ namespace VTBoard.UI
         /// </summary>
         public ReactiveCommand<Unit, Unit> Request { get; set; }
 
-
-
         /// <summary>
         /// Executes an operation from the available list
         /// </summary>
         public ReactiveCommand<string, Unit> Execute { get; set; }
+        public Dictionary<string, string> Posts { get => posts; set => posts = value; }
 
         public LandingPageViewModel()
         {
@@ -123,6 +131,26 @@ namespace VTBoard.UI
                         _progressDialogService.Hide();
                     }
                 });
+            //Dictionary to hold posts
+            posts = new Dictionary<string, string>();
+
+
+            //Testing
+            var tempstr = "Title1,Title2,Title3,The App Stores Posts!";
+            var titles = tempstr.Split(',');
+            foreach (var op in titles)
+            {
+                Operations.Add(op);
+            }
+
+            
+            posts.Add("Title1", "text for title1.");
+            posts.Add("Title2", "text for title2.");
+            posts.Add("Latin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ante velit. Ut congue est id mi faucibus, sed elementum mi bibendum. Phasellus volutpat, ex a ornare varius, mi ante ullamcorper dui, et finibus urna turpis in libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam elit ante, malesuada at enim eu, gravida dignissim massa. In nulla metus, sagittis id faucibus ut, rutrum pulvinar est. Aliquam erat volutpat. Aenean suscipit lorem id nibh porta, vel iaculis metus sollicitudin. Praesent at commodo felis. Aenean scelerisque laoreet orci at vehicula. Nunc accumsan vel nibh ac tempus. Maecenas hendrerit magna dui, ac pulvinar purus bibendum nec. Curabitur pretium, dui id vehicula tincidunt, ipsum justo finibus mi, et lacinia quam enim eu lacus.");
+            posts.Add("The App Stores Posts!", "Here we outline the fact that out application can store and retireve posts.");
+
+
+
 
             // The refresh command
             Refresh = ReactiveCommand.Create(() =>
@@ -132,7 +160,7 @@ namespace VTBoard.UI
             // The Menu command
             Menu = ReactiveCommand.Create(() =>
             {
-
+                //Application.Current.MainPage = new Menu();
             });
             // The post command
             Post = ReactiveCommand.Create(() =>
@@ -175,7 +203,14 @@ namespace VTBoard.UI
             // Execute an operation
             this.Execute = ReactiveCommand.Create<string>((operation) =>
             {
-                _btClient.SendData(operation);
+                if (posts.TryGetValue(operation, out string description))
+                {
+                    Output = description;
+                }
+                else
+                {
+                    Message = "Fail";
+                }
             });
 
             Refresh.Execute().Subscribe();

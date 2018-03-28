@@ -18,5 +18,6 @@
             <Label Text="VTBoard" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
             <BoxView Grid.Column="2" Color="Red"/>
         </Grid>
+        <Label Text="YAY a new page" />
     </StackLayout>
 </ContentPage>
