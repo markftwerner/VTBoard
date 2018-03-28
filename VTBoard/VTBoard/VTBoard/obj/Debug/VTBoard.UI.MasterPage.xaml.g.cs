@@ -11,16 +11,16 @@
 namespace MasterDetailPageNavigation {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Mark\\source\\repos\\VTBoard\\VTBoard\\VTBoard\\VTBoard\\UI\\LandingPage.xaml")]
-    public partial class MainPage : global::Xamarin.Forms.MasterDetailPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Mark\\source\\repos\\VTBoard\\VTBoard\\VTBoard\\VTBoard\\UI\\MasterPage.xaml")]
+    public partial class MasterPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::MasterDetailPageNavigation.MasterPage masterPage;
+        private global::Xamarin.Forms.ListView listView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
-            masterPage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MasterDetailPageNavigation.MasterPage>(this, "masterPage");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MasterPage));
+            listView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "listView");
         }
     }
 }

@@ -10,14 +10,12 @@ using Xamarin.Forms.Xaml;
 
 namespace VTBoard.UI
 {
-
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LandingPage : ContentPage
+    public partial class MasterPage : ContentPage
     {
-        public LandingPage()
+        public ListView ListView { get { return ListView; } }
+        public MasterPage()
         {
             InitializeComponent();
-            BindingContext = new LandingPageViewModel();
         }
     }
 }

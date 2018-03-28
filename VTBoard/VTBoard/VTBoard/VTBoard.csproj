@@ -13,7 +13,8 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,8 +41,8 @@
     <Compile Include="Services\IBtClient.cs" />
     <Compile Include="Services\IBtDiscovery.cs" />
     <Compile Include="Services\IProgressDialogService.cs" />
-    <Compile Include="UI\LandingPage.xaml.cs">
-      <DependentUpon>LandingPage.xaml</DependentUpon>
+    <Compile Include="UI\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\PosterBoard_Main.xaml.cs">
@@ -54,11 +55,11 @@
     </Compile>
     <Compile Include="UI\Network_DomainViewModel.cs" />
     <Compile Include="UI\Setting_ViewModel.cs" />
-    <Compile Include="UI\Setting.xaml.cs">
-      <DependentUpon>Setting.xaml</DependentUpon>
+    <Compile Include="UI\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
+    <Compile Include="UI\MasterPage.xaml.cs">
+      <DependentUpon>MasterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\MenuViewModel.cs" />
   </ItemGroup>
@@ -75,11 +76,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Setting.xaml">
+    <EmbeddedResource Include="UI\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Menu.xaml">
+    <EmbeddedResource Include="UI\MasterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -122,7 +123,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UI\LandingPage.xaml">
+    <EmbeddedResource Include="UI\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

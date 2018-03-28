@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 
 namespace VTBoard.UI
 {
-    public partial class Setting : ContentPage
+    public partial class SettingsPage : ContentPage
     {
-        public Setting()
+        public SettingsPage()
         {
             InitializeComponent();
-            BindingContext = new Setting_ViewModel();
         }
     }
 }
