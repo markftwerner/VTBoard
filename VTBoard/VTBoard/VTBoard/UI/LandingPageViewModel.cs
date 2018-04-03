@@ -136,7 +136,7 @@ namespace VTBoard.UI
 
 
             //Testing
-            var tempstr = "Title1,Title2,Title3,The App Stores Posts!";
+            var tempstr = "Title1,Title2,Latin,The App Stores Posts!";
             var titles = tempstr.Split(',');
             foreach (var op in titles)
             {
@@ -243,7 +243,7 @@ namespace VTBoard.UI
             else if (data.StartsWith("pst"))
             {
                 var parts = data.Split(':');
-                var postTotal = parts[1].Split('#$#');
+                var postTotal = parts[1].Split('#');
 
             }
             else
