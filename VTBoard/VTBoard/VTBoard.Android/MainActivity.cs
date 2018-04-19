@@ -34,9 +34,9 @@ namespace VTBoard.Android
             global::Xamarin.Forms.Forms.Init(this, bundle);
             CheckBluetoothPermissions();
         }
-
+        public void CreatePage() => StartActivity(typeof(Activity1));
         /// <summary>
-        /// MAke sure that all requested permissions are available
+        /// Make sure that all requested permissions are available
         /// </summary>
         private void CheckBluetoothPermissions()
         {

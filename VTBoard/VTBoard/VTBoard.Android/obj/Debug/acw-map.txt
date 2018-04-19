@@ -1,3 +1,7 @@
+VTBoard.Android.Activity1, RasPiBtControl.Android;md592dbce1606f5d9c20a62620fb22b1760.Activity1
+VTBoard.Android.Activity1, RasPiBtControl.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md592dbce1606f5d9c20a62620fb22b1760.Activity1
+VTBoard.Android.Activity1;md592dbce1606f5d9c20a62620fb22b1760.Activity1
+vtboard.android.Activity1;md592dbce1606f5d9c20a62620fb22b1760.Activity1
 VTBoard.Android.MainActivity, RasPiBtControl.Android;md592dbce1606f5d9c20a62620fb22b1760.MainActivity
 VTBoard.Android.MainActivity, RasPiBtControl.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md592dbce1606f5d9c20a62620fb22b1760.MainActivity
 VTBoard.Android.MainActivity;md592dbce1606f5d9c20a62620fb22b1760.MainActivity

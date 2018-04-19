@@ -13,29 +13,29 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ScrollView>
         <StackLayout Padding="10">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Button Text="Menu" Command="{Binding Menu}" Grid.Column="0" />
-                <Label Text="VTBoard" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
-                <BoxView Grid.Column="2" />
-            </Grid>
-            <!--<Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />-->
-
-            <StackLayout Orientation="Horizontal">
-                <Picker ItemsSource="{Binding PairedDevices}" SelectedItem="{Binding SelectedDevice, Mode=TwoWay}" Title="Select Device" HorizontalOptions="StartAndExpand" />
-                <Button Text="Refresh" Command="{Binding Refresh}" HorizontalOptions="End"/>
-            </StackLayout>
-
+        <!--Header-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Menu" Command="{Binding Menu}" Grid.Column="0" />
+            <Label Text="VTBoard" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <BoxView Grid.Column="2" />
+        </Grid>
+        <!--<Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />-->
+        <StackLayout Orientation="Horizontal">
+            <Picker ItemsSource="{Binding PairedDevices}" SelectedItem="{Binding SelectedDevice, Mode=TwoWay}" Title="Select Device" HorizontalOptions="StartAndExpand" />
+            <Button Text="Refresh" Command="{Binding Refresh}" HorizontalOptions="End"/>
+        </StackLayout>
+        <!--Body-->
             <!--<Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50" />
@@ -60,8 +60,8 @@
 
             <BoxView HeightRequest="50"/>
 
-            <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="EndAndExpand" />
-            <Button Text="Request Post" Command="{Binding Request}" HorizontalOptions="EndAndExpand" />-->
+            <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="EndAndExpand" />-->
+            <Button Text="Request Post" Command="{Binding Request}" HorizontalOptions="EndAndExpand" />
 
             <ListView ItemsSource="{Binding Operations}">
                 <ListView.ItemTemplate>
@@ -75,6 +75,9 @@
 
             <Label Text="{Binding Output}" FontSize="Large" VerticalOptions="StartAndExpand"/>
             <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="FillAndExpand" />
-        </StackLayout>
+
+        <!--Footer-->
+        
+    </StackLayout>
     </ScrollView>
 </ContentPage>

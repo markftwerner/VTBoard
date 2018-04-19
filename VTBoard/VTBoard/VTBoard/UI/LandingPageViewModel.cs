@@ -160,7 +160,8 @@ namespace VTBoard.UI
             // The Menu command
             Menu = ReactiveCommand.Create(() =>
             {
-                //Application.Current.MainPage = new Menu();
+                Application.Current.MainPage = new Menu();
+                Application.Current.Parent = new LandingPage();
             });
             // The post command
             Post = ReactiveCommand.Create(() =>
@@ -206,6 +207,7 @@ namespace VTBoard.UI
                 if (posts.TryGetValue(operation, out string description))
                 {
                     Output = description;
+                    
                 }
                 else
                 {
@@ -240,10 +242,25 @@ namespace VTBoard.UI
                     Operations.Add(op);
                 }
             }
-            else if (data.StartsWith("pst"))
+            else if (data.StartsWith("psts"))
             {
                 var parts = data.Split(':');
                 var postTotal = parts[1].Split('#');
+
+                Operations.Clear();
+                foreach (var pos in postTotal )
+                {
+                    var postSplt = pos.Split('^');
+                    if(posts.ContainsKey(postSplt[0]))
+                    {
+                        posts[postSplt[0]] = postSplt[1];
+                    }
+                    else
+                    {
+                        posts.Add(postSplt[0], postSplt[1]);
+                    }
+                    Operations.Add(postSplt[0]);
+                }
 
             }
             else

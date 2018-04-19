@@ -7,7 +7,8 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.BLUETOOTH" />
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-  <application android:label="VTBoard.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+  <application android:label="VTBoard.Android" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="Activity1" android:name="md592dbce1606f5d9c20a62620fb22b1760.Activity1" />
     <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="VTBoard" android:theme="@style/MainTheme" android:name="md592dbce1606f5d9c20a62620fb22b1760.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
