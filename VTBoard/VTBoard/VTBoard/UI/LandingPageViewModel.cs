@@ -50,6 +50,14 @@ namespace VTBoard.UI
             set { this.RaiseAndSetIfChanged(ref _postInput, value); }
         }
 
+        private string _postTitle;
+
+        public string PostTitle
+        {
+            get { return _postTitle; }
+            set { this.RaiseAndSetIfChanged(ref _postTitle, value); }
+        }
+
         private string _message;
         /// <summary>
         /// Last message from server
@@ -136,26 +144,32 @@ namespace VTBoard.UI
 
 
             //Testing
-            var tempstr = "Title1,Title2,Latin,The App Stores Posts!";
-            var titles = tempstr.Split(',');
-            foreach (var op in titles)
+            void DemoMode()
             {
-                Operations.Add(op);
+                var tempstr = "Demo1,Demo Post 2,Latin";
+                var titles = tempstr.Split(',');
+                foreach (var op in titles)
+                {
+                    Operations.Add(op);
+                }
+
+
+                posts.Add("Demo1", "This is demo post 1.");
+                posts.Add("Demo Post 2", "This is a post to demo without a Raspberry Pi");
+                posts.Add("Latin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ante velit. Ut congue est id mi faucibus, sed elementum mi bibendum. Phasellus volutpat, ex a ornare varius, mi ante ullamcorper dui, et finibus urna turpis in libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam elit ante, malesuada at enim eu, gravida dignissim massa. In nulla metus, sagittis id faucibus ut, rutrum pulvinar est. Aliquam erat volutpat. Aenean suscipit lorem id nibh porta, vel iaculis metus sollicitudin. Praesent at commodo felis. Aenean scelerisque laoreet orci at vehicula. Nunc accumsan vel nibh ac tempus. Maecenas hendrerit magna dui, ac pulvinar purus bibendum nec. Curabitur pretium, dui id vehicula tincidunt, ipsum justo finibus mi, et lacinia quam enim eu lacus.");
+
             }
 
-            
-            posts.Add("Title1", "text for title1.");
-            posts.Add("Title2", "text for title2.");
-            posts.Add("Latin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ante velit. Ut congue est id mi faucibus, sed elementum mi bibendum. Phasellus volutpat, ex a ornare varius, mi ante ullamcorper dui, et finibus urna turpis in libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam elit ante, malesuada at enim eu, gravida dignissim massa. In nulla metus, sagittis id faucibus ut, rutrum pulvinar est. Aliquam erat volutpat. Aenean suscipit lorem id nibh porta, vel iaculis metus sollicitudin. Praesent at commodo felis. Aenean scelerisque laoreet orci at vehicula. Nunc accumsan vel nibh ac tempus. Maecenas hendrerit magna dui, ac pulvinar purus bibendum nec. Curabitur pretium, dui id vehicula tincidunt, ipsum justo finibus mi, et lacinia quam enim eu lacus.");
-            posts.Add("The App Stores Posts!", "Here we outline the fact that out application can store and retireve posts.");
-
-
-
+            DemoMode();
 
             // The refresh command
             Refresh = ReactiveCommand.Create(() =>
             {
                 _btDiscovery.Refresh();
+                Message = "";
+                PostTitle = "";
+                PostInput = "";
+                //Operations.Clear();
             });
             // The Menu command
             Menu = ReactiveCommand.Create(() =>
@@ -166,7 +180,9 @@ namespace VTBoard.UI
             // The post command
             Post = ReactiveCommand.Create(() =>
             {
-                _btClient.SendData("pst:" + PostInput);
+                _btClient.SendData("pst:" + PostTitle + "^" + PostInput);
+                PostTitle = "";
+                PostInput = "";
             });
             // The request command
             Request = ReactiveCommand.Create(() =>
@@ -191,8 +207,8 @@ namespace VTBoard.UI
 
                     if (_btClient.Connect(device.Address))
                     {
-                        // Fetch supported operations from the server
-                        _btClient.SendData("getop:");
+                        // Fetch posts from the server
+                        _btClient.SendData("rqst:uniq");
                     }
                     else
                     {
@@ -206,7 +222,7 @@ namespace VTBoard.UI
             {
                 if (posts.TryGetValue(operation, out string description))
                 {
-                    Output = description;
+                    Message = description;
                     
                 }
                 else
@@ -231,17 +247,6 @@ namespace VTBoard.UI
 
                 Message = parts[1];
             }
-            else if (data.StartsWith("op"))
-            {
-                var parts = data.Split(':');
-                var operations = parts[1].Split(',');
-
-                Operations.Clear();
-                foreach (var op in operations)
-                {
-                    Operations.Add(op);
-                }
-            }
             else if (data.StartsWith("psts"))
             {
                 var parts = data.Split(':');
@@ -261,6 +266,8 @@ namespace VTBoard.UI
                     }
                     Operations.Add(postSplt[0]);
                 }
+                Message = "Done";
+                
 
             }
             else

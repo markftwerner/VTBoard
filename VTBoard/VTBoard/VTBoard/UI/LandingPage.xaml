@@ -15,23 +15,23 @@
     </ContentPage.Resources>
 
     <ScrollView>
-        <StackLayout Padding="10">
+        <StackLayout Padding="5">
         <!--Header-->
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
+                <RowDefinition Height="25" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Text="Menu" Command="{Binding Menu}" Grid.Column="0" />
+            <BoxView Grid.Column="0"/>
             <Label Text="VTBoard" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
-            <BoxView Grid.Column="2" />
+            <BoxView Grid.Column="2"/>
         </Grid>
         <!--<Label Text="VTBoard" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />-->
-        <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal" Padding="0">
             <Picker ItemsSource="{Binding PairedDevices}" SelectedItem="{Binding SelectedDevice, Mode=TwoWay}" Title="Select Device" HorizontalOptions="StartAndExpand" />
             <Button Text="Refresh" Command="{Binding Refresh}" HorizontalOptions="End"/>
         </StackLayout>
@@ -49,21 +49,22 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Button Text="This is a title 1" Grid.Column="0"/>
+                <Button Text="Menu" Command="{Binding Menu}" Grid.Column="0" />
                 <Button Text="VTBoard" Grid.Column="1"/>
                 <Button Text="This is a title 2" Grid.Column="0"/>
             </Grid>
 
             <BoxView />
 
-            <Entry Placeholder="Enter Message Here" Text="{Binding PostInput, Mode=TwoWay}" />
-            <Button Text="Post" Command="{Binding Post}" HorizontalOptions="EndAndExpand" />
+            
 
             <BoxView HeightRequest="50"/>
 
-            <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="EndAndExpand" />-->
-            <Button Text="Request Post" Command="{Binding Request}" HorizontalOptions="EndAndExpand" />
-
-            <ListView ItemsSource="{Binding Operations}">
+            <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="EndAndExpand" />
+            <Entry Placeholder="Enter Message Here" Text="{Binding PostInput, Mode=TwoWay}" />
+            <Editor Text="{Binding PostInput, Mode=TwoWay}" />
+            <Button Text="Post" Command="{Binding Post}" HorizontalOptions="EndAndExpand" /> -->
+            <ListView ItemsSource="{Binding Operations}" HeightRequest="200" MinimumHeightRequest="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -73,9 +74,15 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Label Text="{Binding Output}" FontSize="Large" VerticalOptions="StartAndExpand"/>
-            <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="FillAndExpand" />
-
+            <!--<Label Text="{Binding Output}" FontSize="Large" VerticalOptions="StartAndExpand"/>-->
+            <Label Text="{Binding Message}" FontSize="Large" VerticalOptions="Fill" />
+            <Entry Text="{Binding PostTitle, Mode=TwoWay}" Placeholder="Title" />
+            <Editor Text="{Binding PostInput, Mode=TwoWay}" HeightRequest="60" />
+            <StackLayout Orientation="Horizontal" Padding="0" >
+                <Button Text="Request Posts" Command="{Binding Request}" HorizontalOptions="StartAndExpand" />
+                <Button Text="Post" Command="{Binding Post}" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            
         <!--Footer-->
         
     </StackLayout>
