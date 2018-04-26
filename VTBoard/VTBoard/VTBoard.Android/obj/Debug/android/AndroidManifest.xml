@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="RasPiBtControl.Android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="1" android:versionName="1.0" package="RasPiBtControl.Android">
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.INTERNET" />
@@ -7,7 +7,7 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.BLUETOOTH" />
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-  <application android:label="VTBoard.Android" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+  <application android:label="VTBoard.Android" android:icon="@drawable/icon" android:debuggable="true" android:name="android.app.Application" android:allowBackup="true">
     <activity android:label="Activity1" android:name="md592dbce1606f5d9c20a62620fb22b1760.Activity1" />
     <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="VTBoard" android:theme="@style/MainTheme" android:name="md592dbce1606f5d9c20a62620fb22b1760.MainActivity">
       <intent-filter>
