@@ -250,7 +250,7 @@ namespace VTBoard.UI
             else if (data.StartsWith("psts"))
             {
                 var parts = data.Split(':');
-                var postTotal = parts[1].Split('#');
+                var postTotal = parts[1].Split('`');
 
                 Operations.Clear();
                 foreach (var pos in postTotal )
